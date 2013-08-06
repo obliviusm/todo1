@@ -1,4 +1,9 @@
 <h1><%= @project.name %></h1>
 <%= link_to "edit", edit_project_path(@project) %>
 <%= link_to "delete", project_path(@project), method: :delete, data: {confirm: "Really delete the article?"}%>
+<h3>Tasks</h3>
+<table>
+	<th><td>Name</td><td>Status</td><td>Deadline</td></th>
+<%= render partial: 'projects/task', collection: @project.tasks %>
+</table>
 <%= link_to "<< Back to Articles List", projects_path %>
