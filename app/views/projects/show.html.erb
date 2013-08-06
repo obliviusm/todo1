@@ -2,8 +2,10 @@
 <%= link_to "edit", edit_project_path(@project) %>
 <%= link_to "delete", project_path(@project), method: :delete, data: {confirm: "Really delete the article?"}%>
 <h3>Tasks</h3>
-<table>
-	<th><td>Name</td><td>Status</td><td>Deadline</td></th>
+<table border="1">
+	<tr><td>Name</td><td>Status</td><td>Deadline</td></tr>
 <%= render partial: 'projects/task', collection: @project.tasks %>
 </table>
+<%= render partial: 'tasks/form' %>
+
 <%= link_to "<< Back to Articles List", projects_path %>

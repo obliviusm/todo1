@@ -1,0 +1,19 @@
+<h3>Form for task</h3>
+
+<%= form_for [ @project, @task ] do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :status %>
+    <%= f.check_box :status %>
+  </p>
+  <p>
+    <%= f.label :deadline %>
+    <%= f.date_field :deadline %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>
