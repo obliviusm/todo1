@@ -1,0 +1,4 @@
+<h1><%= @project.name %></h1>
+<%= link_to "edit", edit_project_path(@project) %>
+<%= link_to "delete", project_path(@project), method: :delete, data: {confirm: "Really delete the article?"}%>
+<%= link_to "<< Back to Articles List", projects_path %>
