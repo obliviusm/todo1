@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 	def index
 	  	@projects = Project.all
+	  	@project = Project.new
 	end
 
 	def show
@@ -16,8 +17,10 @@ class ProjectsController < ApplicationController
 	def create
 		@project = Project.new(project_params)
 		@project.save
-
-		redirect_to project_path(@project)
+		respond_to do |format|
+			format.html { redirect_to project_path(@project) }
+			format.js
+		end
 	end
 
 	def destroy
