@@ -1,14 +1,12 @@
-<%= form_for(@project) do |f| %>
+<%= form_for(@project, html: {class: "form-inline"}) do |f| %>
   <ul>
   <% @project.errors.full_messages.each do |error| %>
     <li><%= error %></li>
   <% end %>
   </ul>
-  <p>
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
+
+    <%= f.submit 'Submit', class: "btn btn-success" %>
+
 <% end %>
