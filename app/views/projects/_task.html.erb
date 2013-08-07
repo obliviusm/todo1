@@ -2,4 +2,6 @@
   <td><%= task.name %></td>
   <td><%= task.status %></td>
   <td><%= task.deadline %></td>
+  <td></td>
+  <td><%= link_to 'delete', [ @project, task ], method: :delete, remote: true %></td>
 </tr>

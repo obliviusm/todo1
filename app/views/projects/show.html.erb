@@ -3,7 +3,7 @@
 <%= link_to "delete", project_path(@project), method: :delete, data: {confirm: "Really delete the article?"}%>
 <h3>Tasks (<%= @project.tasks.size %>)</h3>
 <table class="table  table-hover">
-	<thead><td>Name</td><td>Status</td><td>Deadline</td><thead>
+	<thead><td>Name</td><td>Status</td><td>Deadline</td><td>Edit</td><td>Delete</td><thead>
 <tbody><%= render partial: 'projects/task', collection: @project.tasks %></tbody>
 </table>
 <%= render partial: 'tasks/form' %>

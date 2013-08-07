@@ -1,9 +1,10 @@
 <h1>All Projects</h1>
 
-<ul id="projects">
-  <% @projects.each do |project| %>
-    <li>
-      <%= link_to project.name, project_path(project) %>
-    </li>
-  <% end %>
-</ul>
+<% @projects.each do |project| %>
+	<%= div_for project do%>
+  		<%= link_to project.name, project %>
+  		<%= link_to 'edit', edit_project_path(project) %>
+  		<%= link_to 'delete', project, method: :delete, remote: true, 
+  			data: {confirm: "Really delete the project?"} %>
+	<%end%>
+<% end %>

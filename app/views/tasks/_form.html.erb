@@ -2,17 +2,17 @@
 
 <%= form_for [ @project, @task ], html: {class: "form-horizontal"} do |f| %>
 	<div class="form-group">
-    <%= f.label :name, class: "col-lg-2 control-label" %>
+    <%= f.label :name, "Your goal ", class: "col-lg-2 control-label" %>
     <%= f.text_field :name, class: "form-control" %>
 	</div>
 
     <div class="form-group">
-    <%= f.label :deadline, class: "col-lg-2 control-label"  %>
+    <%= f.label :deadline, "The very last day ", class: "col-lg-2 control-label"  %>
     <%= f.date_field :deadline, class: "form-control" %>
 	</div>
 
     <div class="form-group">
-    <%= f.label :status, class: "col-lg-2 control-label"  %>
+    <%= f.label :status, "Done?", class: "col-lg-2 control-label"  %>
     <%= f.check_box :status %>
 	</div>
 

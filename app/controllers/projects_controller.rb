@@ -24,7 +24,10 @@ class ProjectsController < ApplicationController
 		@project  = Project.find(params[:id])
 		@project.destroy
 
-		redirect_to projects_path
+		respond_to do |format|
+			format.html { redirect_to projects_path}
+			format.js
+		end
 	end
 
 	def edit
