@@ -35,6 +35,11 @@ class ProjectsController < ApplicationController
 
 	def edit
 		@project = Project.find(params[:id])
+
+		respond_to do |format|
+			format.html
+			format.js
+		end
 	end
 
 	def update
@@ -43,7 +48,12 @@ class ProjectsController < ApplicationController
 
 		 flash.notice = "Project '#{@project.name}' Updated!"
 
-		redirect_to project_path(@project)
+		
+
+		respond_to do |format|
+			format.html { redirect_to project_path(@project) }
+			format.js
+		end
 	end
 
 	def project_params
