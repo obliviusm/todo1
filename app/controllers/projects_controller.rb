@@ -46,10 +46,6 @@ class ProjectsController < ApplicationController
 		@project = Project.find(params[:id])
 		@project.update(project_params)
 
-		 flash.notice = "Project '#{@project.name}' Updated!"
-
-		
-
 		respond_to do |format|
 			format.html { redirect_to project_path(@project) }
 			format.js

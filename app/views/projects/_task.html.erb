@@ -1,7 +1,7 @@
-<tr>
-  <td><%= task.name %></td>
-  <td><%= task.status %></td>
-  <td><%= task.deadline %></td>
-  <td></td>
-  <td><%= link_to 'delete', [ @project, task ], method: :delete, remote: true %></td>
-</tr>
+<%= div_for task do%>
+  <%= task.name %>
+  <%= task.status %>
+  <%= task.deadline %>
+  <%= link_to 'edit', edit_project_task_path( @project, task ) %>
+  <%= link_to 'delete', [ @project, task ], method: :delete, remote: true %>
+<% end %>
