@@ -1,8 +1,9 @@
 <h1>All Projects</h1>
 
-<div id="projects">
-	<%= render @projects %>
-</div>
+<table class="table  table-hover">
+	<thead><td>Name</td><td>Edit</td><td>Delete</td><thead>
+	<tbody><%= render @projects %></tbody>
+</table>
 
 <h2>Create a New Project</h2>
 <%= render partial: 'form' %>
