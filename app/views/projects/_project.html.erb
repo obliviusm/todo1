@@ -4,6 +4,12 @@
 	<%= link_to 'delete', project, method: :delete, remote: true, 
 		data: {confirm: "Really delete the project?"} %>
 <%end%>
+
+<% @project = project %>
+<% @task = @project.tasks.new %>
+
+<%= render partial: 'tasks/form' %>
+
 <div class="tasks">
   <%= render partial: 'projects/task', collection: project.tasks %>
 </div>

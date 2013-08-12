@@ -1,7 +1,8 @@
 class ProjectsController < ApplicationController
 	def index
 	  	@projects = Project.all
-	  	@project = Project.new
+	  	#@project = Project.new
+      #@task = Task.new
 	end
 
 	def show
