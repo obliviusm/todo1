@@ -21,7 +21,10 @@ class TasksController < ApplicationController
 		@task = Task.find(params[:id])
 		@task.destroy
 
-		format.js
+    respond_to do |format|
+      format.html
+      format.js
+    end
 	end
 
 	def edit
