@@ -3,13 +3,17 @@
 	<%= link_to 'edit', edit_project_path(project), remote: true %>
 	<%= link_to 'delete', project, method: :delete, remote: true, 
 		data: {confirm: "Really delete the project?"} %>
+
+
+    <% @project = project %>
+    <% @task = @project.tasks.new %>
+
+    <%= render partial: 'tasks/form' %>
+
+    <div class="tasks">
+        <%= render partial: 'projects/task', collection: project.tasks %>
+    </div>
+
 <%end%>
 
-<% @project = project %>
-<% @task = @project.tasks.new %>
-
-<%= render partial: 'tasks/form' %>
-
-<div class="tasks">
-  <%= render partial: 'projects/task', collection: project.tasks %>
-</div>
+<hr />
