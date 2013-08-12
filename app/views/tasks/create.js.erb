@@ -1,2 +1,2 @@
-$('div#tasks').append("<%= escape_javascript(render @task) %>");
+$('div#tasks').append("<%= escape_javascript(render partial: 'projects/task', object: @task ) %>");
 $('div#<%= dom_id(@task)%>').effect('highlight');
