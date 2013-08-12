@@ -1,7 +1,8 @@
-<%= div_for task do%>
-    <%= task.name %>
-    <%= task.status %>
-    <%= task.deadline %>
+<%= div_for task, class: "task" do%>
+    <div class="task_check"><input type="checkbox" /></div>
+    <div class="task_text"><%= task.name %></div>
+    <% task.status %>
+    <% task.deadline %>
     <%= link_to 'edit', edit_project_task_path( Project.find(task.project_id), task ), remote: true %>
     <%= link_to 'delete', [ Project.find(task.project_id), task ], method: :delete, remote: true %>
 <% end %>

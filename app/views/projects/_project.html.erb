@@ -1,19 +1,26 @@
 <%= div_for project do%>
-	<%= link_to project.name, project %>
-	<%= link_to 'edit', edit_project_path(project), remote: true %>
-	<%= link_to 'delete', project, method: :delete, remote: true, 
-		data: {confirm: "Really delete the project?"} %>
-
+    <div class="project_show">
+        <div class="project_folder"></div>
+        <div class="project_right">
+            <%= link_to edit_project_path(project), remote: true do %>
+                <div class="project_edit"></div>
+            <% end %>
+            <%= link_to project, method: :delete, remote: true do %>
+                <div class="project_delete"></div>
+            <% end %>
+        </div>
+        <div class="project_text"><%= project.name %></div>
+    </div>
 
     <% @project = project %>
     <% @task = @project.tasks.new %>
 
-    <%= render partial: 'tasks/form' %>
+    <div class="add_task">
+        <%= render partial: 'tasks/form' %>
+    </div>
 
     <div class="tasks">
         <%= render partial: 'projects/task', collection: project.tasks.delete_if{|x| x.id == nil} %>
     </div>
 
 <%end%>
-
-<hr />
