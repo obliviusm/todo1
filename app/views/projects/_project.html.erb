@@ -11,7 +11,7 @@
     <%= render partial: 'tasks/form' %>
 
     <div class="tasks">
-        <%= render partial: 'projects/task', collection: project.tasks %>
+        <%= render partial: 'projects/task', collection: project.tasks.delete_if{|x| x.id == nil} %>
     </div>
 
 <%end%>
