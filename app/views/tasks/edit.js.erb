@@ -1,1 +1,1 @@
-console.log("dff");
+$('#<%= dom_id(@task) %>').html("").append("<%= escape_javascript( render partial: 'form') %>");

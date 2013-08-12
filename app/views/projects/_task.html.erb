@@ -2,6 +2,6 @@
   <%= task.name %>
   <%= task.status %>
   <%= task.deadline %>
-  <%= link_to 'edit', edit_project_task_path( @project, task ) %>
+  <%= link_to 'edit', edit_project_task_path( @project, task ), remote: true %>
   <%= link_to 'delete', [ @project, task ], method: :delete, remote: true %>
 <% end %>
