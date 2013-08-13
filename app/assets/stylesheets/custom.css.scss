@@ -90,11 +90,16 @@ div.project_text {
 }
 
 div.project_right {
+  visibility: hidden;
   position: relative;
   float: right;
   width: 80px;
   height: 20px;
   padding-top: 17px;
+}
+
+div.project_show:hover .project_right{
+  visibility: visible;
 }
 
 .project_edit {
@@ -106,6 +111,30 @@ div.project_right {
   left: 1px;
   width: 15px;
   height: 15px;
+}
+
+.project_edit:hover {
+  transform: scale(1.5,1.5);
+  -ms-transform: scale(1.5,1.5); /* IE 9 */
+  -webkit-transform: scale(1.5,1.5); /* Safari and Chrome */
+}
+
+.project_delete:hover {
+  transform: scale(1.5,1.5);
+  -ms-transform: scale(1.5,1.5); /* IE 9 */
+  -webkit-transform: scale(1.5,1.5); /* Safari and Chrome */
+}
+
+.task_edit:hover {
+  transform: scale(1.5,1.5);
+  -ms-transform: scale(1.5,1.5); /* IE 9 */
+  -webkit-transform: scale(1.5,1.5); /* Safari and Chrome */
+}
+
+.task_delete:hover {
+  transform: scale(1.5,1.5);
+  -ms-transform: scale(1.5,1.5); /* IE 9 */
+  -webkit-transform: scale(1.5,1.5); /* Safari and Chrome */
 }
 
 div.project_separator {
@@ -310,6 +339,10 @@ div.task {
   border-top: 1px solid #E7EBEA;
 }
 
+div.task:hover .task_right {
+  visibility: visible;
+}
+
 div.task_text {
   margin-top: 15px;
   margin-left: 50px;
@@ -332,6 +365,7 @@ div.task_check {
 }
 
 div.task_right {
+  visibility: hidden;
   position: relative;
   float: right;
   width: 80px;
