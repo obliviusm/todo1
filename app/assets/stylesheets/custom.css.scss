@@ -11,6 +11,7 @@ div#title {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 120px;
   position: relative;
   top: 50px;
 }
@@ -35,7 +36,7 @@ div#title h2 {
 /******************************list*****************************/
 div.project {
   position: relative;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 /***************************** project ************************/
 div.project_show {
@@ -44,6 +45,7 @@ div.project_show {
   cursor: pointer;
   /*min-height: 50px;
   height: 50px;*/
+  z-index: 999;
 
   display: block;
   margin-left: auto;
@@ -339,6 +341,15 @@ div.task {
   border-top: 1px solid #E7EBEA;
 }
 
+div.task:hover {
+  background-color: #FCFED5;
+}
+
+div.task:last-of-type:hover {
+  background-color: #FCFED5;
+  border-radius: 0px 0px 20px 20px;
+}
+
 div.task:hover .task_right {
   visibility: visible;
 }
@@ -346,7 +357,8 @@ div.task:hover .task_right {
 div.task_text {
   margin-top: 15px;
   margin-left: 50px;
-  margin-bottom: 15px;
+  /*margin-bottom: 15px;  */
+  padding-bottom: 15px;
   width: 550px;
   color: grey;
   font-weight: bold;
@@ -360,7 +372,7 @@ div.task_text {
 div.task_check {
   position: relative;
   float:left;
-  top: 15px;
+  top: 13px;
   left: 15px;
 }
 
