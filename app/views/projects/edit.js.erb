@@ -1,1 +1,1 @@
-$('#<%= dom_id(@project) %>').html("").append("<%= escape_javascript( render partial: 'form') %>");
+$('#<%= dom_id(@project) %>').find('.project_show').html("").append("<%= escape_javascript( render partial: 'form') %>");

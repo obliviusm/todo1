@@ -1,12 +1,9 @@
-<%= form_for(@project, html: {class: "form-inline"}, remote: true) do |f| %>
-  <ul>
-  <% @project.errors.full_messages.each do |error| %>
-    <li><%= error %></li>
-  <% end %>
-  </ul>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+<%= form_for(@project, remote: true) do |f| %>
 
-    <%= f.submit 'Submit', class: "btn btn-success" %>
+    <div class="project_plus"></div>
+
+    <%= f.text_field :name, class: "project_input" %><!--
+
+    --><%= f.submit 'Change Project', class: "project_button" %>
 
 <% end %>

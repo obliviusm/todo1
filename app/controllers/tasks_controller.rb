@@ -38,10 +38,11 @@ class TasksController < ApplicationController
 	end
 
 	def update
-		@task = Task.find(params[:id])
-		@task.update(task_params)
+		@task1 = Task.find(params[:id])
+		@task1.update(task_params)
 
 		@project = Project.find(params[:project_id])
+    @task = @project.tasks.new
 
 		respond_to do |format|
 			format.html { redirect_to project_path(@project) }

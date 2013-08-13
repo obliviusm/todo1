@@ -1,4 +1,3 @@
-/*@import "bootstrap";*/
 body {
   background-image: url(background.jpg);
   background-color: #000;
@@ -34,7 +33,7 @@ div#title h2 {
   text-shadow: 0px 1px 1px white;
 }
 /******************************list*****************************/
-div.list {
+div.project {
   position: relative;
   margin-top: 100px;
 }
@@ -129,6 +128,78 @@ div.project_delete {
   left: 23px;
   width: 16px;
   height: 16px;
+}
+
+div.project_plus {
+  background-image: url(project/project_plus.png);
+  background-position: top left no-repeat;
+  position: relative;
+  float: left;
+  top: 13px;
+  left: 13px;
+  width: 24px;
+  height: 24px;
+}
+
+div.project_input {
+  position: relative;
+  float: left;
+  left: 25px;
+  top: 12px;
+}
+
+input[type="text"].project_input {
+
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  padding-right: 0px;
+  width: 535px;
+  height: 24px;
+  text-indent: 10px;
+
+  /*box-shadow: 0px 1px 1px black; /* Параметры тени */
+}
+div.project_button {
+  position: relative;
+  float: left;
+  left: 25px;
+  top: 12px;
+}
+
+input[type="submit"].project_button   {
+  border: 1px solid #364A70;
+  color: white;
+  width: 100px;
+  height: 30px;
+  border-radius: 0px 5px 5px 0px;
+
+  margin: 0px;
+  padding: 0px;
+
+  font-family: Arial;
+  text-shadow: 1px 1px 1px black;
+
+  background: #98B0D2;
+}
+
+input[type="submit"].project_button:hover {
+  color: black;
+  text-shadow: 1px 1px 1px white;
+}
+
+input[type="submit"].project_button:active {
+
+  background: #96cdb0; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #96cdb0 0%, #4d8464 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#96cdb0), color-stop(100%,#4d8464)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #96cdb0 0%,#4d8464 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #96cdb0 0%,#4d8464 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #96cdb0 0%,#4d8464 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #96cdb0 0%,#4d8464 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#96cdb0', endColorstr='#4d8464',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 
 div.add_task {
@@ -248,7 +319,7 @@ div.task_text {
   font-weight: bold;
 
   font-family: Arial;
-  font-size: 13;
+  font-size:13px;
 
 
 }
@@ -261,7 +332,44 @@ div.task_check {
 }
 
 div.task_right {
+  position: relative;
+  float: right;
+  width: 80px;
+  height: 20px;
+  padding-top: 17px;
+}
 
+.task_edit {
+  background-image: url(task/task_edit.png);
+  /*background-position: top left no-repeat;*/
+  position: relative;
+  float: left;
+  /*top: 13px;*/
+  left: 1px;
+  width: 12px;
+  height: 12px;
+}
+
+div.task_separator {
+  background-image: url(task/task_separ.png);
+  /*background-position: top left no-repeat;*/
+  position: relative;
+  float: left;
+  /*top: 13px;*/
+  left: 12px;
+  width: 2px;
+  height: 14px;
+}
+
+div.task_delete {
+  background-image: url(task/task_delete.png);
+  /*background-position: top left no-repeat;*/
+  position: relative;
+  float: left;
+  /*top: 13px;*/
+  left: 23px;
+  width: 12px;
+  height: 12px;
 }
 
 
