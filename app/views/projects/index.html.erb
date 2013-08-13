@@ -3,4 +3,7 @@
 </div>
 
 <% @project = Project.new %>
-<%= render partial: 'form' %>
+
+<%= form_for(@project, remote: true) do |f| %>
+    <%= f.submit 'Add TODO List', class: "add_project" %>
+<% end %>

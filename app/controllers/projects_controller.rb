@@ -16,7 +16,8 @@ class ProjectsController < ApplicationController
 	end
 
 	def create
-		@project = Project.new(project_params)
+		@project = Project.new
+    @project.name = 'New TODO List'
 		@project.save
 		respond_to do |format|
 			format.html { redirect_to project_path(@project) }

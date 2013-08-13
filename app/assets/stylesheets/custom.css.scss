@@ -1,8 +1,23 @@
 body {
+  background: url(background.jpg) no-repeat center center fixed;
+
+  -webkit-background-size: cover; /*Used by Safari & Chrome*/
+  -moz-background-size: cover; /* Used by Firefox */
+  -o-background-size: cover; /* Used by Opera */
+  background-size: cover; /* All Modern Browsers */
+  /*
   background-image: url(background.jpg);
-  background-color: #000;
-  background-position: top left no-repeat;
-  background-size: 100% 100%;
+
+  //background-repeat: no-repeat;
+  //background-position: top left;
+  //background-attachment: fixed;
+  //width: 100%;
+  //min-height: 100%;
+
+  -moz-background-size: contain;
+  -webkit-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;  */
 }
 
 /************************** title **********************/
@@ -231,6 +246,44 @@ input[type="submit"].project_button:active {
   background: radial-gradient(ellipse at center,  #96cdb0 0%,#4d8464 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#96cdb0', endColorstr='#4d8464',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
+}
+
+.add_project {
+  font-family: "Times New Roman", Arial;
+  font-size: 18px;
+  color: white;
+
+  position: relative;
+  width: 210px;
+  height: 46px;
+  z-index: 999;
+
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 1px solid #315589;
+  outline: 1px solid #90ABD5;
+  outline-offset: -2px;
+
+  background-image: url(project/project_plus.png);
+  background-position: left;
+  background-repeat: no-repeat;
+
+  background: #5183be; /* Old browsers */
+  //background: -moz-linear-gradient(45deg,  #5183be 1%, #375d9e 100%); /* FF3.6+ */
+  //background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,#5183be), color-stop(100%,#375d9e)); /* Chrome,Safari4+ */
+  //background: -webkit-linear-gradient(45deg,  #5183be 1%,#375d9e 100%); /* Chrome10+,Safari5.1+ */
+  //background: -o-linear-gradient(45deg,  #5183be 1%,#375d9e 100%); /* Opera 11.10+ */
+  //background: -ms-linear-gradient(45deg,  #5183be 1%,#375d9e 100%); /* IE10+ */
+  //background: linear-gradient(45deg,  #5183be 1%,#375d9e 100%); /* W3C */
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5183be', endColorstr='#375d9e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  background-image: url(project/project_plus.png);
+  background-position-x: 5%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
 }
 
 div.add_task {
