@@ -1,2 +1,6 @@
-$('#<%= dom_id(@project) %>').find('.tasks').append("<%= escape_javascript(render partial: 'projects/task', object: @task ) %>");
-$('div#<%= dom_id(@task)%>').effect('highlight');
+<% if @task.valid? %>
+    $('#<%= dom_id(@project) %>').find('.tasks').append("<%= escape_javascript(render partial: 'projects/task', object: @task ) %>");
+    $('div#<%= dom_id(@task)%>').effect('highlight');
+<% else %>
+    $('#<%= dom_id(@project) %>').find(".add_task").find(':text').effect('highlight');
+<% end %>

@@ -267,11 +267,9 @@ input[type="submit"].project_button:active {
   outline: 1px solid #90ABD5;
   outline-offset: -2px;
 
-  background-image: url(project/project_plus.png);
-  background-position: left;
-  background-repeat: no-repeat;
 
-  background: #5183be; /* Old browsers */
+
+  background: #4572AF; /* Old browsers */
   //background: -moz-linear-gradient(45deg,  #5183be 1%, #375d9e 100%); /* FF3.6+ */
   //background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,#5183be), color-stop(100%,#375d9e)); /* Chrome,Safari4+ */
   //background: -webkit-linear-gradient(45deg,  #5183be 1%,#375d9e 100%); /* Chrome10+,Safari5.1+ */
@@ -284,6 +282,12 @@ input[type="submit"].project_button:active {
   background-position-x: 5%;
   background-position-y: 50%;
   background-repeat: no-repeat;
+
+}
+
+.add_project:hover {
+  -webkit-box-shadow: 0 0 9px #333;
+  cursor: pointer;
 }
 
 div.add_task {

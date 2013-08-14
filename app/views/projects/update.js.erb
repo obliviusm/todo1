@@ -1,1 +1,5 @@
-$('#<%= dom_id(@project) %>').html("").append("<%= escape_javascript( render @project ) %>");
+<% if @project.valid? %>
+    $('#<%= dom_id(@project) %>').html("").append("<%= escape_javascript( render @project ) %>");
+<% else %>
+    $('#<%= dom_id(@project) %>').find(".project_show").find(':text').effect('highlight');
+<% end %>
