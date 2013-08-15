@@ -1,12 +1,12 @@
 body {
-  background: image-url(background.jpg) no-repeat center center fixed;
+  background: image-url("background.jpg") no-repeat center center fixed;
 
   -webkit-background-size: cover; /*Used by Safari & Chrome*/
   -moz-background-size: cover; /* Used by Firefox */
   -o-background-size: cover; /* Used by Opera */
   background-size: cover; /* All Modern Browsers */
   /*
-  background-image: url(background.jpg);
+  background-image: image-url("background.jpg");
 
   //background-repeat: no-repeat;
   //background-position: top left;
