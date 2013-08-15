@@ -1,24 +1,4 @@
-body {
-  background: asset-data-url("background.jpg");
 
-  -webkit-background-size: cover; /*Used by Safari & Chrome*/
-  -moz-background-size: cover; /* Used by Firefox */
-  -o-background-size: cover; /* Used by Opera */
-  background-size: cover; /* All Modern Browsers */
-  /*
-  background-image: image-url("background.jpg");
-
-  //background-repeat: no-repeat;
-  //background-position: top left;
-  //background-attachment: fixed;
-  //width: 100%;
-  //min-height: 100%;
-
-  -moz-background-size: contain;
-  -webkit-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;  */
-}
 
 /************************** title **********************/
 div#title {
