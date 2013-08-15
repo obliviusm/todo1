@@ -51,3 +51,11 @@ test:
   pool: 5
   username: f3
   password: fiotis0110
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: dev_misha
+  pool: 5
+  username: misha
+  password: fiotis0110
