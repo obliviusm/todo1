@@ -7,9 +7,11 @@ http://protected-brook-1646.herokuapp.com/
 Queries:
 
 1.
+```sql
 SELECT DISTINCT status 
 FROM tasks
 ORDER BY status ASC ;
+```
 
 2.
 SELECT projects.name, COUNT(*) as count
