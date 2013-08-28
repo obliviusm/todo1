@@ -1,28 +1,63 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Site adress:
 
-Things you may want to cover:
+http://protected-brook-1646.herokuapp.com/
 
-* Ruby version
+Queries:
 
-* System dependencies
+1.
+SELECT DISTINCT status 
+FROM tasks
+ORDER BY status ASC ;
 
-* Configuration
+2.
+SELECT projects.name, COUNT(*) as count
+FROM tasks JOIN projects 
+ON tasks.project_id = projects.id
+GROUP BY project_id
+ORDER BY count DESC ;
 
-* Database creation
+3.
+SELECT projects.name, COUNT(*) AS COUNT
+FROM tasks JOIN projects
+ON tasks.project_id = projects.id
+GROUP BY project_id
+ORDER BY projects.name ;
 
-* Database initialization
+4.
+SELECT name
+FROM tasks
+WHERE name LIKE 'N%';
 
-* How to run the test suite
+5.
+SELECT projects.name, COUNT(tasks.project_id) AS 'task\'s number'
+FROM projects LEFT JOIN tasks
+ON projects.id = tasks.project_id
+GROUP BY tasks.project_id
+HAVING projects.name LIKE '_%a%_';
+	
+6.
+SELECT name
+FROM tasks
+GROUP BY name
+HAVING COUNT(name) >= 2
+ORDER BY name ASC ;
 
-* Services (job queues, cache servers, search engines, etc.)
+7.
+SELECT tasks.name, tasks.status, COUNT(*) as count
+FROM tasks JOIN projects
+ON tasks.project_id = projects.id
+WHERE projects.name = 'Garage'
+GROUP BY tasks.name, tasks.status
+HAVING count > 1
+ORDER BY count ASC ;
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+8.
+SELECT projects.name, COUNT(tasks.project_id) as count
+FROM tasks JOIN projects
+ON tasks.project_id = projects.id
+WHERE tasks.status = 'completed'
+GROUP BY tasks.project_id
+HAVING count > 10
+ORDER BY projects.id ; 
