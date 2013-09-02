@@ -17,3 +17,8 @@
 
 #Ignore idea
 /.idea
+
+#windows
+/Gemfile
+/Gemfile.lock
+/config/database.yml
