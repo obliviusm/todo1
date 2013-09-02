@@ -1,4 +1,10 @@
 <div id="title">
   <h1>SIMPLE TODO LISTS</h1>
   <h2>FROM RUBY GARAGE</h2>
+  <% if signed_in? %>
+      You have entered as <%= current_user.name %>
+      <%= link_to "Sign out", signout_path, method: "delete" %>
+  <% else %>
+      <%= link_to "Sign in", signin_path %>
+  <% end %>
 </div>

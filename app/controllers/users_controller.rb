@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
+      redirect_to root_path
     else
       render 'new'
     end
@@ -27,7 +27,4 @@ class UsersController < ApplicationController
                                  :password_confirmation)
   end
 
-  def signed_in_user
-    redirect_to signin_url, notice: "Please sign in." unless signed_in?
-  end
 end
