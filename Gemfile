@@ -7,7 +7,7 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'jquery-ui-rails'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 gem 'rails_12factor', group: :production
 gem 'pg'
 
