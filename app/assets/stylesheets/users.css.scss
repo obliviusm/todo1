@@ -1,11 +1,11 @@
-#error_explanation {
+#error_explanation, .alert {
   width: 400px;
   position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 
   font-style: italic;
   color: #ff2d03;
@@ -20,6 +20,15 @@
   text-align: center;
   margin-bottom: 30px;
   text-shadow: 0px 1px 1px white;
+}
+
+.sign h2 {
+  font-family: Helvetica-Bold Helvetica;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 0px;
+  text-shadow: 0px 1px 1px #ffe16b;
 }
 
 div.sign {
