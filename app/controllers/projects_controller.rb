@@ -1,6 +1,9 @@
 class ProjectsController < ApplicationController
+  before_action :signed_in_user
+
 	def index
-	  	@projects = Project.all
+      @projects = current_user.projects.all
+	  	#@projects = Project.all
 	  	#@project = Project.new
       #@task = Task.new
 	end
@@ -12,11 +15,11 @@ class ProjectsController < ApplicationController
 	end
 
 	def new
-		@project = Project.new
+		@project = current_user.projects.new
 	end
 
 	def create
-		@project = Project.new
+		@project = current_user.projects.new
     @project.name = 'New TODO List'
 		@project.save
 		respond_to do |format|

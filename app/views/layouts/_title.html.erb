@@ -1,0 +1,10 @@
+<div id="title">
+  <h1>SIMPLE TODO LISTS</h1>
+  <h2>FROM RUBY GARAGE</h2>
+  <% if signed_in? %>
+      <h2>
+        Hello, <%= current_user.name %>
+        <%= link_to "Sign out", signout_path, method: "delete" %>
+      </h2>
+  <% end %>
+</div>

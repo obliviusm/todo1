@@ -1,0 +1,24 @@
+
+
+
+<div class="sign">
+    <h1>Sign in</h1>
+
+  <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.submit "Sign in", class: "add_project" %>
+    <% end %>
+
+    <h2><p>New user? <%= link_to "Sign up now!", signup_path %></p></h2>
+
+</div>

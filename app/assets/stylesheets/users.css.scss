@@ -1,0 +1,91 @@
+#error_explanation, .alert {
+  width: 400px;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 10px;
+
+  font-style: italic;
+  color: #ff2d03;
+}
+.field_with_errors input {
+  border: 1px solid red;
+}
+.sign h1 {
+  font-family: Helvetica-Bold Helvetica;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0px 1px 1px white;
+}
+
+.sign h2 {
+  font-family: Helvetica-Bold Helvetica;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 0px;
+  text-shadow: 0px 1px 1px #ffe16b;
+}
+
+div.sign {
+  width: 410px;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+}
+
+.sign input[type="text"], input[type="password"] {
+  width: 400px;
+  height: 24px;
+  text-indent: 10px;
+}
+
+.sign label {
+  font-family: Helvetica-Bold Helvetica;
+  font-size: 20px;
+  font-weight: 550;
+  text-shadow: 0px 1px 1px white;
+}
+
+
+/*
+.sign input[type="submit"] {
+  font-family: "Times New Roman", Arial;
+  font-size: 18px;
+  color: white;
+
+  position: relative;
+  width: 210px;
+  height: 46px;
+  z-index: 999;
+
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 1px solid #315589;
+  outline: 1px solid #90ABD5;
+  outline-offset: -2px;
+
+
+
+  background: #4572AF;
+
+  background-image: url(project/project_plus.png);
+  background-position-x: 5%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+}
+
+.sign input[type="submit"]:hover {
+  -webkit-box-shadow: 0 0 9px #333;
+  cursor: pointer;
+}
+*/
