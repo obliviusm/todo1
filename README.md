@@ -1,8 +1,8 @@
 == README
 
 #Site adress:
-
-http://protected-brook-1646.herokuapp.com/
+with authorization http://scooby-todo.herokuapp.com/
+and without http://protected-brook-1646.herokuapp.com/
 
 #Queries:
 
