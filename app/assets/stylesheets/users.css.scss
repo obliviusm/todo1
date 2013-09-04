@@ -1,15 +1,39 @@
-div.sign {
-  width: 700px;
+#error_explanation {
+  width: 400px;
   position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 0px;
 
+  font-style: italic;
+  color: #ff2d03;
+}
+.field_with_errors input {
+  border: 1px solid red;
+}
+.sign h1 {
+  font-family: Helvetica-Bold Helvetica;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0px 1px 1px white;
+}
+
+div.sign {
+  width: 410px;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
 
 }
 
 .sign input[type="text"], input[type="password"] {
-  width: 535px;
+  width: 400px;
   height: 24px;
   text-indent: 10px;
 }
